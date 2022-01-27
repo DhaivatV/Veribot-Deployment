@@ -4,6 +4,19 @@ from Incoming import Query
 import pandas as pd
 import numpy as np
 import spacy
+from fastapi.middleware.cors import CORSMiddleware
+
+app = FastAPI()
+
+origins = ["*"]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 app = FastAPI()
 nlp = spacy.load("en_my_pipeline")
