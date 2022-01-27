@@ -12,9 +12,9 @@ nlp = spacy.load("en_my_pipeline")
 def index():
     return {'message': 'Hello, Stranger'}
 
-@app.post("/predict/")
-async def predict(predict:Query):
-    data = predict.dict()
+@app.post("/Addquery/")
+async def predict(Addquery):
+    data = Addquery.dict()
     print(data)
     print("Hello")
     text = data['text']
