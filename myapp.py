@@ -13,8 +13,8 @@ def index():
     return {'message': 'Hello, Stranger'}
 
 @app.post("/predict/")
-async def predict(data:Query):
-    data = data.dict()
+async def predict(predict:Query):
+    data = predict.dict()
     print(data)
     print("Hello")
     text = data['text']
