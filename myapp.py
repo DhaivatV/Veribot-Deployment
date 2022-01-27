@@ -7,7 +7,6 @@ import spacy
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
-
 origins = ["*"]
 
 app.add_middleware(
