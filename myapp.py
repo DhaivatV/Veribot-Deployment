@@ -8,11 +8,11 @@ import spacy
 app = FastAPI()
 nlp = spacy.load("C:\\Users\\dvipa\\OneDrive\\Desktop\\Deployment\\en_my_pipeline")
 
-@app.get ('/')
-def index ():
+@app.get ("/")
+def index():
     return {'message': 'Hello, Stranger'}
 
-@app.post('/predict')
+@app.post("/predict")
 def predict(data:Query):
     data = data.dict()
     print(data)
