@@ -17,7 +17,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app = FastAPI()
 nlp = spacy.load("en_my_pipeline")
 
 @app.get ("/")
